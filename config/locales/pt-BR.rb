@@ -51,6 +51,9 @@
       :money => "Dinheiro",
       :others => "Outros"
     },
+    :notifications => {
+      :helptype => "Como este individuo te ajudou?"
+    },
     :twitter_share => {
       :please_help => "Por favor ajude ",
       :button => "Compartilhe no Twitter"

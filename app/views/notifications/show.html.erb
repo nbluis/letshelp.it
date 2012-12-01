@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <div class="orgDescription">
+      
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <b>Organization:</b>
+      <%= @notification.organization %>
+    </p>
+
+    <p>
+      <b>Tag:</b>
+      <%= @notification.tag %>
+    </p>
+
+    <p>
+      <b>Email:</b>
+      <%= @notification.email %>
+    </p>
+
+    <p>
+      <b>Description:</b>
+      <%= @notification.description %>
+    </p>
+  
+  </div>
+</div>
+
+<%#= link_to 'Edit', edit_notification_path(@notification) %> |
+<%#= link_to 'Back', notifications_path %>

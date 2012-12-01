@@ -19,6 +19,7 @@ public
   def show
     @organization = Organization.find(params[:id])
     @tags = Tag.all
+    @notification = Notification.new
   end
 
   # GET /organizations/new

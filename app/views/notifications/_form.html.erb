@@ -1,0 +1,33 @@
+<%= form_for(@notification) do |f| %>
+  <%= f.error_messages %>
+
+  <div class="field">
+
+    <h2> <%= t('notifications.helptype') %> </h2>
+
+    <% @organization.tags.each do |tag| %>
+        <%= t("tag.#{tag.name}") %> <%= f.radio_button :tag_id, tag.id %>
+    <% end %>
+  </div>
+  
+  <div class="field">
+    <%= f.hidden_field :organization_id, :value => @organization.id %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :person_name %>
+    <%= f.text_field :person_name %>
+  </div>
+  
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.text_field :email %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

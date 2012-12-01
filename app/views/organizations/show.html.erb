@@ -26,6 +26,10 @@
       <%= link_to t('org_form.edit_button'), edit_organization_path(@organization), :class => 'link edit'  %>
     </p>
   </div>
-  <div class="clear"></div>
+
+  <div class="notification">
+    <%= render :partial => 'notifications/form', :locals => { :@notification => @notification, :@organization => @organization } %>
+  </div>
+    <div class="clear"></div>
 </div>
 <div class="clear"></div>
